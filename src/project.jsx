@@ -5,72 +5,86 @@ const projectsData = [
   {
     id: 1,
     title: 'ChatiFy',
-    description: 'A chating app provides real time intraction, allows functionality such as making channels and sharing images',
+    description: 'Chatify provides a real time intraction, allows functionality such as making channels and sharing images check it out on my GITHUB',
     imgSrc: './projectimg/images/project1.jpg',
     caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/chatify',
-    skills: ['JavaScript', 'React', 'socket.io','Node.js', 'Express', 'MongoDB','Vue.js']
+    skills: ['JavaScript', 'React', 'socket.io','Node.js', 'Express', 'MongoDB','tailwind','Radix ui']
   },
+
   {
     id: 2,
-    title: 'Project 2',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    imgSrc: './assets/jpeg/project-mockup-example.jpeg',
-    caseStudyLink: 'https://github.com/your-repo/project-2',
-    skills: ['Node.js', 'Express', 'MongoDB']
+    title: 'Face Recognition and Greeting System',
+    description: 'Developed a robust face recognition model using OpenCV, and TensorFlow, integrated with Raspberry Pi for real-time detection and greeting.',
+    imgSrc: './projectimg/images/testingimg.png',
+    caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/face-detection-greeting-system',
+    skills: ['OpenCV', 'TensorFlow', 'Raspberry Pi', 'Python']
   },
   {
     id: 3,
-    title: 'Project 3',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    imgSrc: './assets/jpeg/project-mockup-example.jpeg',
-    caseStudyLink: 'https://github.com/your-repo/project-3',
-    skills: ['HTML', 'CSS', 'JavaScript']
+    title: 'Tripling',
+    description: 'Developed a MERN stack app for users to search, update, and review camps/hotels seamlessly.',
+    imgSrc: './projectimg/images/tripling.png',
+    caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/Tripling',
+    skills: ['Javascript', 'React','Node.js','Express.js','MongoDB']
   },
   {
     id: 4,
     title: 'Project 4',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    imgSrc: './assets/jpeg/project-mockup-example.jpeg',
-    caseStudyLink: 'https://github.com/your-repo/project-4',
-    skills: ['Python', 'Django', 'PostgreSQL']
+    description: 'Designed a maze-solving car using a PID controller, motor driver, and Arduino; showcased at Technex, IIT-BHU.',
+    imgSrc: './projectimg/images/mazesolver.png',
+    caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/Maze-Solver_Robot',
+    skills: ['Arduino', 'C++','more']
   },
   {
     id: 5,
-    title: 'Project 5',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    imgSrc: './assets/jpeg/project-mockup-example.jpeg',
-    caseStudyLink: 'https://github.com/your-repo/project-5',
-    skills: ['Vue.js', 'Vuex', 'SCSS']
+    title: 'Parkit',
+    description: 'ParkIT is a smart parking solution using AI, IoT, and cloud for real-time parking updates, security,AI-mapping, and automated reservations.',
+    imgSrc: './projectimg/images/parkit.png',
+    caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/Parkit',
+    skills: ['IoT Development','AI/ML','Cloud Computing','C++','Python','OpenCV','esp32','more']
   },
   {
     id: 6,
-    title: 'Project 5',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    imgSrc: './assets/jpeg/project-mockup-example.jpeg',
-    caseStudyLink: 'https://github.com/your-repo/project-5',
-    skills: ['Vue.js', 'Vuex', 'SCSS']
+    title: 'Twitter Sentiment Analysis',
+    description: 'Twitter Sentimental Analysis: Machine learning-based project categorizing tweets as positive, negative, or neutral ',
+    imgSrc: './projectimg/images/twittersentiment.png',
+    caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/Twitter-sentiment-analysis',
+    skills: ['Python','Logistic Regression','Jupyter notebook','Decision Tree','XGBoost']
   },
   {
     id: 7,
-    title: 'Project 5',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-    imgSrc: './assets/jpeg/project-mockup-example.jpeg',
-    caseStudyLink: 'https://github.com/your-repo/project-5',
-    skills: ['Vue.js', 'Vuex', 'SCSS']
+    title: 'Flappy bird',
+    description: 'Flappy Bird is a simple, yet addictive mobile game where players control a bird, navigating it through a series of pipes by tapping the screen to keep it flying without hitting obstacles',
+    imgSrc: './projectimg/images/flappybird.png',
+    caseStudyLink: 'https://flappy-bird-nu-red.vercel.app/',
+    skills: ['HTML', 'CSS', 'JavaScript']
+  },
+  {
+    id: 8,
+    title: 'Snake Game',
+    description: 'Classic Snake Game: Navigate a snake to eat food pellets while avoiding obstacles, growing in length with each consumption, in a simple yet addictive gameplay.',
+    imgSrc: './projectimg/images/snakegame.png',
+    caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/snake-game',
+    skills: ['HTML', 'CSS', 'JavaScript']
   },
   
 ];
 
+
+
 const ProjectsSection = () => {
   const [visibleProjects, setVisibleProjects] = useState(4);
+  const [showOverlayText, setShowOverlayText] = useState(false);
   const projectsRef = useRef([]);
 
   const handleLoadMore = () => {
     setVisibleProjects((prevVisible) => prevVisible + 4);
+    setShowOverlayText(true); 
   };
 
   const handleShowLess = () => {
     setVisibleProjects(4);
+    setShowOverlayText(false);
   };
 
   useEffect(() => {
@@ -85,13 +99,13 @@ const ProjectsSection = () => {
       { threshold: 0.1 }
     );
 
-    projectsRef.current.forEach((el) => {
-      if (el) observer.observe(el);
+    projectsRef.current.forEach((e) => {
+      if (e) observer.observe(e);
     });
 
     return () => {
-      projectsRef.current.forEach((el) => {
-        if (el) observer.unobserve(el);
+      projectsRef.current.forEach((e) => {
+        if (e) observer.unobserve(e);
       });
     };
   }, [visibleProjects]);
@@ -103,12 +117,11 @@ const ProjectsSection = () => {
           <span className="heading-sec__main">Projects</span>
         </h2>
         <div className="projects__content">
-
           {projectsData.slice(0, visibleProjects).map((project, index) => (
             <div
               key={project.id}
               className="projects__card"
-              ref={(el) => (projectsRef.current[index] = el)}
+              ref={(e) => (projectsRef.current[index] = e)}
             >
               <a
                 href={project.caseStudyLink}
@@ -150,6 +163,12 @@ const ProjectsSection = () => {
             </button>
           )}
         </div>
+
+        {showOverlayText && (
+          <div className="overlay-text">
+            Find more projects on my GitHub
+          </div>
+        )}
       </div>
     </section>
   );
