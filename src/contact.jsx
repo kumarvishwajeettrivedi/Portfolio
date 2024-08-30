@@ -17,29 +17,35 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    emailjs
-      .send(
-        'service_gzojcvj', 
-        'template_h6k9pvw', 
-        formData,
-        'vVKc2k5f9X7QLeR2w' 
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert('Message sent successfully!');
-        },
-        (error) => {
-          console.log(error.text);
-          alert('Failed to send message, please try again later.');
-        }
-      );
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    setFormData({ name: '', email: '', message: '' }); // Reset form after submission
+  const emailData = {
+    from_name: formData.name,
+    reply_to: formData.email,
+    message: formData.message,
   };
+
+  emailjs
+    .send(
+      'service_gzojcvj',
+      'template_h6k9pvw',
+      emailData,
+      'vVKc2k5f9X7QLeR2w'
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        alert('Message sent successfully!');
+      },
+      (error) => {
+        console.log(error.text);
+        alert('Failed to send message, please try again later.');
+      }
+    );
+
+  setFormData({ name: '', email: '', message: '' });
+};
 
   return (
     <section id="contact" className="contact">
