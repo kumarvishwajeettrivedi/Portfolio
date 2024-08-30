@@ -18,34 +18,36 @@ const ContactSection = () => {
   };
 
 const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const emailData = {
-    from_name: formData.name,
-    reply_to: formData.email,
-    message: formData.message,
-  };
+    const emailData = {
+        from_name: formData.name,       // Maps to {{from_name}}
+        reply_to: formData.email,       // Maps to {{reply_to}}
+        to_name: "Vishwajeet Kumar",    // Hardcode or dynamically set your name if it's always the same
+        message: formData.message       // Maps to {{message}}
+    };
 
-  emailjs
-    .send(
-      'service_gzojcvj',
-      'template_h6k9pvw',
-      emailData,
-      'vVKc2k5f9X7QLeR2w'
-    )
-    .then(
-      (result) => {
-        console.log(result.text);
-        alert('Message sent successfully!');
-      },
-      (error) => {
-        console.log(error.text);
-        alert('Failed to send message, please try again later.');
-      }
-    );
+    emailjs
+        .send(
+            'service_gzojcvj', 
+            'template_h6k9pvw', 
+            emailData,
+            'vVKc2k5f9X7QLeR2w'
+        )
+        .then(
+            (result) => {
+                console.log(result.text);
+                alert('Message sent successfully!');
+            },
+            (error) => {
+                console.log(error.text);
+                alert('Failed to send message, please try again later.');
+            }
+        );
 
-  setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', email: '', message: '' }); // Reset form after submission
 };
+
 
   return (
     <section id="contact" className="contact">
