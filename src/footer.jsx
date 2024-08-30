@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="main-footer__row main-footer__row-2">
             <h4 className="heading heading-sm text-lt">Vishwajeet Kumar</h4>
             <p className="main-footer__short-desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit facilis tempora explicabo quae quod deserunt.
+            Connect with me on various platforms for collaboration and inquiries. Let's build something amazing together!
             </p>
           </div>
         </div>
