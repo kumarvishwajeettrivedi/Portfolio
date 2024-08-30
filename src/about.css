@@ -298,34 +298,3 @@
 
 
 
-@media only screen and (max-width: 480px) {
-  .about {
-    height: 100vh;
-  }
-
-  .about__content-title {
-    font-size: 0.9rem;
-  }
-
-  .about__content-details-para {
-    font-size: 0.75rem;
-  }
-
-  .btn {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-  }
-
-  .about__text {
-    margin-top: 8rem;
-  }
-
-  .main-container {
-    width: 95%;
-  }
-
-  .skills__skill {
-    padding: 5px;
-    margin: 3px;
-  }
-}
