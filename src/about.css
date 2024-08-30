@@ -17,7 +17,9 @@
 }
 
 
-
+.abt-contact{
+  margin-bottom: 1rem;
+}
 
 .about::before {
   content: "";
@@ -262,10 +264,10 @@
     --star-width: calc(var(--star-tail-length) / 8);
   }
   .about::before {
-    top: 0; /* Position it just after the title */
-    left: 15%;
-    width: 80%; /* Reduce width for mobile screens */
-    height: 32%; /* Adjust height for mobile screens */
+    top: 0; 
+    left: 27%;
+    width: 80%; 
+    height: 30%; 
     background: url('../public/projectimg/images/about_img.jpg') no-repeat center;
     background-size: cover;
     opacity: 0.6; 
@@ -277,4 +279,19 @@
  .about__text{
   margin-top: 12rem;
  }
+
+ .skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skills__skill {
+  background: bla;
+  padding: 7px;
+  margin: 4px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(129, 126, 126, 0.8);
+}
+
 }
