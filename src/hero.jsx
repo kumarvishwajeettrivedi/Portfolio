@@ -77,8 +77,10 @@ function HeroSection() {
         
         <div className="home-hero__info">
           <p className="text-primary">
-            Solutions for complex problems. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis tempora explicabo quae quod deserunt eius sapiente.
-          </p>
+
+          "Passionate software developer with a love for machine learning, tech, and web 
+          development. I enjoy tackling complex problems, creating smart solutions, and building engaging web experiences. 
+          Check out my portfolio to see what I’ve been working on and what drives me."          </p>
         </div>
        
         <div className="home-hero__cta">
