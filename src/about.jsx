@@ -43,35 +43,50 @@ const AboutSection = () => {
                 Currently, I’m a pre-final year student specializing in{" "}
                 <strong>Software Development</strong>,{" "}
                 <strong>Electronics and Control Systems Design</strong>, and am
-                an enthusiast of <strong>Machine Learning</strong>
-                ,  Feel free to
+                an enthusiast of <strong>Machine Learning</strong>, Feel free to
                 explore my work and <strong>get in touch</strong>!
               </p>
             </div>
 
             <a
               href="./#contact"
-              className="btn btn--med btn--theme dynamicBgClr"
+              className="btn btn--med btn--theme dynamicBgClr abt-contact"
             >
               Contact
             </a>
             <div className="about__content-skills">
               <h3 className="about__content-title">Tech Stack</h3>
               <div className="skills">
+                <div className="skills__skill">C</div>
+                <div className="skills__skill">C++</div>
+                <div className="skills__skill">JavaScript</div>
+                <div className="skills__skill">Python</div>
+                <div className="skills__skill">SQL</div>
                 <div className="skills__skill">HTML</div>
                 <div className="skills__skill">CSS</div>
-                <div className="skills__skill">JavaScript</div>
+
                 <div className="skills__skill">React</div>
+                <div className="skills__skill">Vue.js</div>
                 <div className="skills__skill">Node.js</div>
-                <div className="skills__skill">MongoDB</div>
-                <div className="skills__skill">SQL</div>
-                <div className="skills__skill">PHP</div>
                 <div className="skills__skill">Django</div>
-                <div className="skills__skill">Redux</div>
-                <div className="skills__skill">Firebase</div>
+                <div className="skills__skill">TensorFlow</div>
+                <div className="skills__skill">Pandas</div>
+                <div className="skills__skill">NumPy</div>
+                <div className="skills__skill">Scikit-learn</div>
                 <div className="skills__skill">Socket.io</div>
-                <div className="skills__skill">Machine Learning</div>
+                <div className="skills__skill">Tailwind CSS</div>
+
+                <div className="skills__skill">MongoDB</div>
+                <div className="skills__skill">Firebase</div>
+                <div className="skills__skill">Redis</div>
+                <div className="skills__skill">JWT</div>
                 <div className="skills__skill">GIT</div>
+                <div className="skills__skill">Docker</div>
+                <div className="skills__skill">AWS</div>
+                <div className="skills">
+                <div className="skills__skill">Arduino Programming</div>
+                <div className="skills__skill">Raspberry Pi Development</div>
+                </div>
               </div>
             </div>
           </div>
