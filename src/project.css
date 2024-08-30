@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  width: 30%;
+  height: 60%;
+  background: url('../public/projectimg/images/project_img.jpg') no-repeat  center;
+  opacity: 1; 
+  z-index: 0; 
+}
+
+.projects {
+  padding: 80px 0;
+  padding-bottom: 200px;
+  background: radial-gradient(circle at center, 
+  #6d5f40, 
+  #6d6b6b ,
+  #53538f 
+);
+
+  z-index: 3000;
+  position: relative; /* Ensure the pseudo-element is positioned correctly */
+}
+
+.heading-sec__main {
+  color: white;
+  margin-bottom: 60px;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2000;
+  position: relative;
+}
+
+.projects__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  z-index: 2000;
+  position: relative;
+}
+
+.projects__card {
+  width: calc(25% - 40px);
+  background-color: rgba(255, 255, 255, 0.4); /* Slightly transparent background */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 3000;
+  position: relative;
+  opacity: 0; /* Start fully transparent */
+  transform: translateY(40px); /* Start 40px below */
+  animation: fadeInUp 0.8s ease forwards; /* Fade and move up animation */
+}
+
+.projects__card-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  z-index: 3000;
+}
+
+.projects__card-img-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.projects__card-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects__card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.projects__card-description {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.projects__card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.projects__card-skill {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #333333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.875rem;
+}
+
+.projects__load-more {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.projects__load-more .btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #c2a2a2;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.projects__load-more .btn:hover {
+  background-color: #333;
+}
+
+@media (max-width: 1200px) {
+  .projects__card {
+    width: calc(33.33% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__card {
+    width: calc(50% - 40px);
+  }
+  .projects::before {
+   display: none;
+   
+  }
+  .projects {
+    padding: 80px 0;
+    padding-bottom: 100px;
+  }
+   
+  
+}
+
+@media (max-width: 480px) {
+  .projects__card {
+    width: 100%;
+  }
+}
+
+/* Fade in and move up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px); /* Start slightly lower */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}

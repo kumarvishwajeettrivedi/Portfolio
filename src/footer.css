@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+.main-footer {
+    background-color: #292828;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-footer__upper {
+    display: flex;
+    flex-wrap: wrap2;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-footer__row {
+    flex: 1 1 45%;
+    margin-bottom: 20px;
+}
+
+.main-footer__heading-sm {
+    margin-bottom: 10px;
+}
+
+.main-footer__social-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-footer__icon {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%) brightness(200%); /* Makes the icons blend with the background */
+    transition: filter 0.3s ease;
+}
+
+.main-footer__icon:hover {
+    filter: grayscale(0%) brightness(100%); /* Restores color on hover */
+}
+
+.main-footer__short-desc {
+    margin: 0;
+    color: #ccc;
+}
+
+.main-footer__lower {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.main-footer__lower a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.main-footer__lower a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .main-footer__upper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-footer__row {
+        flex: 1 1 100%;
+        text-align: left;
+    }
+
+    .main-footer__social-cont {
+        justify-content: center;
+        z-index: ;
+       
+    }
+}
+
+@media (max-width: 480px) {
+    .main-footer {
+        padding: 20px 0;
+    }
+
+    .main-footer__icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .main-footer__lower {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+  
+  .bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+  
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
+  }

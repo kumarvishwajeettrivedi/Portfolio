@@ -1,0 +1,18 @@
+.canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1500; /* Ensure it's behind other content */
+  transition: opacity 0.3s ease;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.parent-section {
+  position:relative;
+
+  overflow: hidden;
+}
