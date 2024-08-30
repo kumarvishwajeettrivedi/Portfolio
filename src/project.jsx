@@ -64,7 +64,7 @@ const projectsData = [
     title: 'Snake Game',
     description: 'Classic Snake Game: Navigate a snake to eat food pellets while avoiding obstacles, growing in length with each consumption, in a simple yet addictive gameplay.',
     imgSrc: './projectimg/images/snakegame.png',
-    caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/snake-game',
+    caseStudyLink: 'https://snake-game-flame-six.vercel.app/',
     skills: ['HTML', 'CSS', 'JavaScript']
   },
   
