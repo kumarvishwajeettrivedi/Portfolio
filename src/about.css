@@ -297,29 +297,6 @@
 }
 
 
-@media only screen and (max-width: 560px) {
-  .about {
-    height: 100vh;
-  }
-
-  .about__content-title {
-    font-size: 1rem;
-  }
-
-  .about__content-details-para {
-    font-size: 0.8rem;
-  }
-
-  .btn {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-  }
-
-  .about__text {
-    margin-top: 10rem;
-  }
-}
-
 
 @media only screen and (max-width: 480px) {
   .about {
