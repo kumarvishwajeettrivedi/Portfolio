@@ -62,6 +62,8 @@ const AboutSection = () => {
                 <div className="skills__skill">JavaScript</div>
                 <div className="skills__skill">Python</div>
                 <div className="skills__skill">SQL</div>
+                <div className="skills__skill">Dart</div>
+                <div className="skills__skill">Flutter</div>
                 <div className="skills__skill">HTML</div>
                 <div className="skills__skill">CSS</div>
 
