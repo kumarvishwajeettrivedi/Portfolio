@@ -163,12 +163,6 @@ const ProjectsSection = () => {
             </button>
           )}
         </div>
-
-        {showOverlayText && (
-          <div className="overlay-text">
-            Find more projects on my GitHub
-          </div>
-        )}
       </div>
     </section>
   );
