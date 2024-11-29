@@ -2,8 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import './project.css';
 
 const projectsData = [
-  {
+    {
     id: 1,
+    title: 'GroZo',
+    description: 'GroZo is a grocery and food delivery app, the first in Ravangla, Sikkim, delivering 5,000+ orders within a month.',
+    imgSrc: './projectimg/images/1.jpg',
+    caseStudyLink: 'https://drive.google.com/drive/folders/1_zoV3Qk10M7jidw3627IvyfH2NrNnh-a?usp=sharing',
+    skills: ['Flutter','DART','Node.js','Firebase','JavaScript','Redis','Postgresql']
+  },
+  {
+    id: 2,
     title: 'ChatiFy',
     description: 'Chatify provides a real time intraction, allows functionality such as making channels and sharing images check it out on my GITHUB',
     imgSrc: './projectimg/images/project1.jpg',
@@ -12,7 +20,7 @@ const projectsData = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: 'Face Recognition and Greeting System',
     description: 'Developed a robust face recognition model using OpenCV, and TensorFlow, integrated with Raspberry Pi for real-time detection and greeting.',
     imgSrc: './projectimg/images/testingimg.png',
@@ -20,7 +28,7 @@ const projectsData = [
     skills: ['OpenCV', 'TensorFlow', 'Raspberry Pi', 'Python']
   },
   {
-    id: 3,
+    id: 4,
     title: 'Tripling',
     description: 'Developed a MERN stack app for users to search, update, and review camps/hotels seamlessly.',
     imgSrc: './projectimg/images/tripling.png',
@@ -28,7 +36,15 @@ const projectsData = [
     skills: ['Javascript', 'React','Node.js','Express.js','MongoDB']
   },
   {
-    id: 4,
+    id: 5,
+    title: 'RCSC',
+    description: 'I developed a website for RCSC conference on AI and Computer Vision, hosted by NIT Sikkim, enhancing event outreach',
+    imgSrc: './projectimg/images/flappybird.png',
+    caseStudyLink: 'https://flappy-bird-nu-red.vercel.app/',
+    skills: ['HTML', 'CSS', 'JavaScript','Tailwind']
+  },
+  {
+    id: 6,
     title: 'Project 4',
     description: 'Designed a maze-solving car using a PID controller, motor driver, and Arduino; showcased at Technex, IIT-BHU.',
     imgSrc: './projectimg/images/mazesolver.png',
@@ -36,7 +52,7 @@ const projectsData = [
     skills: ['Arduino', 'C++','more']
   },
   {
-    id: 5,
+    id: 7,
     title: 'Parkit',
     description: 'ParkIT is a smart parking solution using AI, IoT, and cloud for real-time parking updates, security,AI-mapping, and automated reservations.',
     imgSrc: './projectimg/images/parkit.png',
@@ -44,29 +60,15 @@ const projectsData = [
     skills: ['IoT Development','AI/ML','Cloud Computing','C++','Python','OpenCV','esp32','more']
   },
   {
-    id: 6,
+    id: 8,
     title: 'Twitter Sentiment Analysis',
     description: 'Twitter Sentimental Analysis: Machine learning-based project categorizing tweets as positive, negative, or neutral ',
     imgSrc: './projectimg/images/twittersentiment.png',
     caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/Twitter-sentiment-analysis',
     skills: ['Python','Logistic Regression','Jupyter notebook','Decision Tree','XGBoost']
   },
-  {
-    id: 7,
-    title: 'Flappy bird',
-    description: 'Flappy Bird is a simple, yet addictive mobile game where players control a bird, navigating it through a series of pipes by tapping the screen to keep it flying without hitting obstacles',
-    imgSrc: './projectimg/images/flappybird.png',
-    caseStudyLink: 'https://flappy-bird-nu-red.vercel.app/',
-    skills: ['HTML', 'CSS', 'JavaScript']
-  },
-  {
-    id: 8,
-    title: 'Snake Game',
-    description: 'Classic Snake Game: Navigate a snake to eat food pellets while avoiding obstacles, growing in length with each consumption, in a simple yet addictive gameplay.',
-    imgSrc: './projectimg/images/snakegame.png',
-    caseStudyLink: 'https://snake-game-flame-six.vercel.app/',
-    skills: ['HTML', 'CSS', 'JavaScript']
-  },
+  
+
   
 ];
 
