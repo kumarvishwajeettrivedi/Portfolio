@@ -27,21 +27,22 @@ const projectsData = [
     caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/face-detection-greeting-system',
     skills: ['OpenCV', 'TensorFlow', 'Raspberry Pi', 'Python']
   },
+
   {
     id: 4,
+    title: 'RCSC',
+    description: 'I developed a website for RCSC conference on AI and Computer Vision, hosted by NIT Sikkim, enhancing event outreach',
+    imgSrc: './projectimg/images/RCSC.png',
+    caseStudyLink: 'https://rcsc2025nitsk.vercel.app',
+    skills: ['HTML', 'CSS', 'JavaScript','Tailwind']
+  },
+    {
+    id: 5,
     title: 'Tripling',
     description: 'Developed a MERN stack app for users to search, update, and review camps/hotels seamlessly.',
     imgSrc: './projectimg/images/tripling.png',
     caseStudyLink: 'https://github.com/kumarvishwajeettrivedi/Tripling',
     skills: ['Javascript', 'React','Node.js','Express.js','MongoDB']
-  },
-  {
-    id: 5,
-    title: 'RCSC',
-    description: 'I developed a website for RCSC conference on AI and Computer Vision, hosted by NIT Sikkim, enhancing event outreach',
-    imgSrc: './projectimg/images/flappybird.png',
-    caseStudyLink: 'https://flappy-bird-nu-red.vercel.app/',
-    skills: ['HTML', 'CSS', 'JavaScript','Tailwind']
   },
   {
     id: 6,
