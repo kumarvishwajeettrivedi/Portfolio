@@ -19,6 +19,9 @@ function HeroSection() {
    const userAgent = navigator.userAgent;
    const isSafariBrowser = userAgent.includes("Safari") && !userAgent.includes("Chrome");
     setIsSafari(isSafariBrowser);
+     if (isSafariBrowser) {
+      alert("😔 Sorry, blobs are not compatible with Safari..please open in anyother browser..working on this issue");
+    }
  }, []);
   
   useEffect(() => {
@@ -47,16 +50,14 @@ function HeroSection() {
 
   return (
     <section className="home-hero">
-      {isSafari ? (
-    <></> 
-  ) : (
+      {
     renderBlobs && (
       <>
         <BlobCanvas />
         <BlobCanvas2 />
         <BlobCanvas3 />
       </>
-    )
+    
   )}
       
 
@@ -80,16 +81,14 @@ function HeroSection() {
    
     
       <div className="home-hero__content">
-      {isSafari ? (
-    <></> 
-  ) : (
+      {
     renderBlobs && (
       <>
         <BlobCanvas />
         <BlobCanvas2 />
         <BlobCanvas3 />
       </>
-    )
+  
   )}
         
         <h1 className="heading-primary">Hey, I'm Vishwajeet Kumar</h1>
