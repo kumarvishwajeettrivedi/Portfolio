@@ -20,17 +20,19 @@ function HeroSection() {
    const isSafariBrowser = userAgent.includes("Safari") && !userAgent.includes("Chrome");
     setIsSafari(isSafariBrowser);
  }, []);
+  
   useEffect(() => {
     const handleScroll = () => {
       const homeHero = document.querySelector('.home-hero');
       const homeHeroHeight = homeHero.offsetHeight;
       const scrollPosition = window.scrollY;
-
+    if(!isSafari){
       if (scrollPosition+500 >= homeHeroHeight) {
         setRenderBlobs(false);
       } else {
         setRenderBlobs(true);
       }
+    }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -45,7 +47,7 @@ function HeroSection() {
 
   return (
     <section className="home-hero">
-      {!isSafari&&renderBlobs && (
+      {renderBlobs && (
         <>
           <BlobCanvas />
           <BlobCanvas2 />
@@ -74,7 +76,7 @@ function HeroSection() {
    
     
       <div className="home-hero__content">
-        {!isSafari &&renderBlobs && (
+        {renderBlobs && (
           <>
             <BlobCanvas />
             <BlobCanvas2 />
