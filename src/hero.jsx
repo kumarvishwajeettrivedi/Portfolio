@@ -47,6 +47,7 @@ function HeroSection() {
 
   return (
     <section className="home-hero">
+      
       {renderBlobs && (
         <>
           <BlobCanvas />
@@ -76,13 +77,17 @@ function HeroSection() {
    
     
       <div className="home-hero__content">
-        {renderBlobs && (
-          <>
-            <BlobCanvas />
-            <BlobCanvas2 />
-            <BlobCanvas3 />
-          </>
-        )}
+      {isSafari ? (
+    <></> 
+  ) : (
+    renderBlobs && (
+      <>
+        <BlobCanvas />
+        <BlobCanvas2 />
+        <BlobCanvas3 />
+      </>
+    )
+  )}
         
         <h1 className="heading-primary">Hey, I'm Vishwajeet Kumar</h1>
         
