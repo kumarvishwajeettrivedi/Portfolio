@@ -12,7 +12,14 @@ import BlobCanvas3 from './bolb3.jsx';
 
 function HeroSection() {
   const [renderBlobs, setRenderBlobs] = useState(true);
+  const [isSafari, setIsSafari] = useState(false);
 
+   useEffect(() => {
+   // Detect if the browser is Safari 
+   const userAgent = navigator.userAgent;
+   const isSafariBrowser = userAgent.includes("Safari") && !userAgent.includes("Chrome");
+    setIsSafari(isSafariBrowser);
+ }, []);
   useEffect(() => {
     const handleScroll = () => {
       const homeHero = document.querySelector('.home-hero');
@@ -65,7 +72,7 @@ function HeroSection() {
       </div>
     
       <div className="home-hero__content">
-        {renderBlobs && (
+        {!isSafari &&renderBlobs && (
           <>
             <BlobCanvas />
             <BlobCanvas2 />
