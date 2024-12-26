@@ -47,14 +47,17 @@ function HeroSection() {
 
   return (
     <section className="home-hero">
-      
-      {renderBlobs && (
-        <>
-          <BlobCanvas />
-          <BlobCanvas2 />
-          <BlobCanvas3 />
-        </>
-      )}
+      {isSafari ? (
+    <></> 
+  ) : (
+    renderBlobs && (
+      <>
+        <BlobCanvas />
+        <BlobCanvas2 />
+        <BlobCanvas3 />
+      </>
+    )
+  )}
       
 
       <div className="home-hero__socials">
