@@ -73,7 +73,7 @@ function HeroSection() {
       </div>
    
     
-      <div className="home-hero">
+      <div className="home-hero__content">
         {!isSafari &&renderBlobs && (
           <>
             <BlobCanvas />
