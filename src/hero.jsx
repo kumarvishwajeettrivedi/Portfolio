@@ -14,18 +14,21 @@ function HeroSection() {
   const [renderBlobs, setRenderBlobs] = useState(true);
   const [isSafari, setIsSafari] = useState(false);
 
-   useEffect(() => {
-   // Detect if the browser is Safari 
-   const userAgent = navigator.userAgent;
-   const isSafariBrowser = userAgent.includes("Safari");
-     
+useEffect(() => {
+    
+    const userAgent = navigator.userAgent;
+    const isSafariBrowser = userAgent.includes("Safari") && !userAgent.includes("Chrome");
     setIsSafari(isSafariBrowser);
-     
-      if (isSafariBrowser) {
+
+    if (isSafariBrowser) {
+    
       const alertTimeout = setTimeout(() => {
         alert("😔 Sorry, blobs are not compatible with Safari. You will be redirected to download Chrome.");
         window.location.href = "https://www.google.com/chrome/";
-      }, 5000); 
+      }, 5000);
+      return () => clearTimeout(alertTimeout);
+    }
+  }, []);
 
   
   useEffect(() => {
