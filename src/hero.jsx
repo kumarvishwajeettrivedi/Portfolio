@@ -53,9 +53,7 @@ function HeroSection() {
         </>
       )}
       {isSafari &&(<> 
-        <BlobCanvas />
-          <BlobCanvas2 />
-          <BlobCanvas3 />
+        
       </>)}
 
       <div className="home-hero__socials">
@@ -75,6 +73,9 @@ function HeroSection() {
           <img src={instaIco} alt="Instagram Icon" className="home-hero__social-icon" />
         </a>
       </div>
+        {isSafari &&(<> 
+        
+      </>)}
     
       <div className="home-hero__content">
         {!isSafari &&renderBlobs && (
