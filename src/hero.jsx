@@ -20,10 +20,9 @@ function HeroSection() {
    const isSafariBrowser = userAgent.includes("Safari") && !userAgent.includes("Chrome");
     setIsSafari(isSafariBrowser);
      if (isSafariBrowser) {
-      alert("😔 Sorry, blobs are not compatible with Safari..please open in anyother browser..working on this issue");
-       window.location.href = "https://www.google.com/chrome/";
+      alert("😔 Sorry,flickring is not a feature its a safari bug..please open in anyother browser..working on this issue");  
     }
- }, []);
+ }, [3000]);
   
   useEffect(() => {
     const handleScroll = () => {
