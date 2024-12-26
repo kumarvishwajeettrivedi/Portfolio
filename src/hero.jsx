@@ -23,9 +23,9 @@ useEffect(() => {
     if (isSafariBrowser) {
     
       const alertTimeout = setTimeout(() => {
-        alert("😔 Sorry, blobs are not compatible with Safari. You will be redirected to download Chrome.");
-        window.location.href = "https://www.google.com/chrome/";
-      }, 5000);
+        alert("😔 Soorry, blobs are not compatible with Safari ...🥺Please open this link in other browser...working on issue");
+       
+      }, 3000);
       return () => clearTimeout(alertTimeout);
     }
   }, []);
