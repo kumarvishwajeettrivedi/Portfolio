@@ -52,9 +52,7 @@ function HeroSection() {
           <BlobCanvas3 />
         </>
       )}
-      {isSafari &&(<> 
-        
-      </>)}
+      
 
       <div className="home-hero__socials">
         <a href="https://www.linkedin.com/in/vishwajeet-kumar-5b7530242" className="home-hero__social-icon-link" data-platform="linkedin" aria-label="LinkedIn">
@@ -73,11 +71,9 @@ function HeroSection() {
           <img src={instaIco} alt="Instagram Icon" className="home-hero__social-icon" />
         </a>
       </div>
-        {isSafari &&(<> 
-        
-      </>)}
+   
     
-      <div className="home-hero__content">
+      <div className="home-hero">
         {!isSafari &&renderBlobs && (
           <>
             <BlobCanvas />
