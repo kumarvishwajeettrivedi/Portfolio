@@ -21,6 +21,7 @@ function HeroSection() {
     setIsSafari(isSafariBrowser);
      if (isSafariBrowser) {
       alert("😔 Sorry, blobs are not compatible with Safari..please open in anyother browser..working on this issue");
+       window.location.href = "https://www.google.com/chrome/";
     }
  }, []);
   
