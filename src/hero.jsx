@@ -19,10 +19,13 @@ function HeroSection() {
    const userAgent = navigator.userAgent;
    const isSafariBrowser = userAgent.includes("Safari") && !userAgent.includes("Chrome");
     setIsSafari(isSafariBrowser);
-     if (isSafariBrowser) {
-  alert("😔 Sooorry,flickring is not a feature its just in safari...please open in anyother browser..working on this issue");  
+    if (isSafariBrowser) {
+      
+      setTimeout(() => {
+        alert("😔 Sorry, blobs are not compatible with Safari. You will be redirected to download Chrome.");
+      }, 8000); // Redirect after 5 seconds
     }
- }, 3000);
+  }, []);
   
   useEffect(() => {
     const handleScroll = () => {
