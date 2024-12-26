@@ -45,7 +45,7 @@ function HeroSection() {
 
   return (
     <section className="home-hero">
-      {renderBlobs && (
+      {!isSafari &&renderBlobs && (
         <>
           <BlobCanvas />
           <BlobCanvas2 />
