@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 }
 
 .home-hero {
-  height: 100vh;
+  height: 99vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
