@@ -45,13 +45,18 @@ function HeroSection() {
 
   return (
     <section className="home-hero">
-      {!isSafari &&renderBlobs && (
+      {!isSafari&&renderBlobs && (
         <>
           <BlobCanvas />
           <BlobCanvas2 />
           <BlobCanvas3 />
         </>
       )}
+      {isSafari &&(<> 
+        <BlobCanvas />
+          <BlobCanvas2 />
+          <BlobCanvas3 />
+      </>)}
 
       <div className="home-hero__socials">
         <a href="https://www.linkedin.com/in/vishwajeet-kumar-5b7530242" className="home-hero__social-icon-link" data-platform="linkedin" aria-label="LinkedIn">
