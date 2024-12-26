@@ -20,9 +20,9 @@ function HeroSection() {
    const isSafariBrowser = userAgent.includes("Safari") && !userAgent.includes("Chrome");
     setIsSafari(isSafariBrowser);
      if (isSafariBrowser) {
-      alert("😔 Sorry,flickring is not a feature its a safari bug..please open in anyother browser..working on this issue");  
+  alert("😔 Sooorry,flickring is not a feature its just in safari...please open in anyother browser..working on this issue");  
     }
- }, [3000]);
+ }, 3000);
   
   useEffect(() => {
     const handleScroll = () => {
