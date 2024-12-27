@@ -266,8 +266,8 @@
   .about::before {
     top: 0; 
     left: 27%;
-    width: 50%; 
-    height: 20%; 
+    width: 80%; 
+    height: 50%; 
     background: url('../public/projectimg/images/about_img.jpg') no-repeat center;
     background-size: cover;
     opacity: 0.6; 
