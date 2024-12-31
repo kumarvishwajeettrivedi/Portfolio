@@ -78,7 +78,7 @@ useEffect(() => {
         <a href="https://www.codechef.com/users/kalkin07" className="home-hero__social-icon-link" data-platform="codechef" aria-label="CodeChef">
           <img src={codechef} alt="CodeChef Icon" className="home-hero__social-icon" />
         </a>
-        <a href="https://www.youtube.com" className="home-hero__social-icon-link" data-platform="youtube" aria-label="YouTube">
+        <a href="https://www.youtube.com/@curious_insan07" className="home-hero__social-icon-link" data-platform="youtube" aria-label="YouTube">
           <img src={ytIco} alt="YouTube Icon" className="home-hero__social-icon" />
         </a>
         <a href="https://www.instagram.com/curious_insan/" className="home-hero__social-icon-link" data-platform="instagram" aria-label="Instagram">
