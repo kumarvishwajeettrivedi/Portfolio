@@ -59,11 +59,11 @@ useEffect(() => {
     <section className="home-hero">
       {
     renderBlobs && (
-      <>
+      <div className="blob-container">
         <BlobCanvas />
         <BlobCanvas2 />
         <BlobCanvas3 />
-      </>
+      <div/>
     
   )}
       
@@ -90,12 +90,12 @@ useEffect(() => {
       <div className="home-hero__content">
       {
     renderBlobs && (
-      <>
+      <div className="blob-container">
         <BlobCanvas />
         <BlobCanvas2 />
         <BlobCanvas3 />
-      </>
-  
+      <div/>
+    
   )}
         
         <h1 className="heading-primary">Hey, I'm Vishwajeet Kumar</h1>
