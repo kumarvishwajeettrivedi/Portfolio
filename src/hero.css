@@ -1,265 +1,171 @@
-/* Hide the horizontal scrollbar */
+/* General Resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.blob-container {
-  transform: translateZ(0);
-  will-change: transform, opacity;
+
+body {
+  overflow: hidden; /* Ensures no scrollbars are visible */
 }
-
-
 
 body::-webkit-scrollbar {
-  height: 0px; /* Set the height of the scrollbar to 0 */
-  background: transparent; /* Make the scrollbar background transparent */
+  width: 0; 
+  height: 0; 
+  background: transparent; 
 }
 
-/* Optional: Ensure vertical scrollbar is also hidden */
-body::-webkit-scrollbar {
-  width: 0px; /* Set the width of the vertical scrollbar to 0 */
-  height: 0px; /* Set the height of the horizontal scrollbar to 0 */
-  background: transparent; /* Make the scrollbar background transparent */
-}
-
+/* Hero Section */
 .home-hero {
   height: 99vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #f7f7f7, #e9ce8f, #d1cbbe);
+  background: -webkit-linear-gradient(to bottom, #f7f7f7, #e9ce8f, #d1cbbe); /* Safari */
+  background: linear-gradient(to bottom, #f7f7f7, #e9ce8f, #d1cbbe); 
   background-size: cover;
   background-position: center bottom;
   padding: 0 20px;
   position: relative;
   overflow: hidden;
 }
-  
-  .home-hero__content {
+
+/* Content Styling */
+.home-hero__content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings and Text */
+.heading-primary {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.text-primary {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Call-to-Action Buttons */
+.btn, .download-resume {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 200;
+}
+
+.btn:hover, .download-resume:hover {
+  background-color: #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Media Icons */
+.home-hero__socials {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 28px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 80000;
+}
+
+.home-hero__social-icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  margin: 4px 0;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Scroll Animation */
+.mouse {
+  width: 24px;
+  height: 40px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  position: relative;
+}
+
+.mouse::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 50%;
+  animation: scroll 1s infinite;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .home-hero {
+    height: auto;
+    padding: 20px;
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
   }
-  
-  .heading-primary {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .home-hero__info {
-    margin-bottom: 2rem;
-  }
-  
-  .text-primary {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.5;
-  }
-  
-  .home-hero__cta {
-    margin-top: 2rem;
-  }
-  
-  .btn {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #444;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .download-resume {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin-top: 2rem; 
-    z-index: 200;
-  }
-  
-  .download-resume:hover {
-    background-color: #444;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
-  }
-  
   .home-hero__socials {
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 28px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 80000;
-  }
-  
-  .home-hero__social-icon-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 54px;
-    height: 54px;
-    margin: 4px 0;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .home-hero__social-icon {
-    width: 30px;
-    height: 30px;
-  }
-  
-  /* Specific icon colors on hover */
-  .home-hero__social-icon-link:hover[data-platform="linkedin"] {
-    background-color: #236588;
-  }
-  
-  .home-hero__social-icon-link:hover[data-platform="github"] {
-    background-color: #4d4242;
-  }
-  
-  .home-hero__social-icon-link:hover[data-platform="codechef"] {
-    background-color: #bba246;
-  }
-  
-  .home-hero__social-icon-link:hover[data-platform="youtube"] {
-    background-color: #d64242;
-  }
-  
-  .home-hero__social-icon-link:hover[data-platform="instagram"] {
-    background-color: #d6536b;
-  }
-  
-  .home-hero__mouse-scroll-cont {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .mouse {
-    width: 24px;
-    height: 40px;
-    border: 2px solid #333;
-    border-radius: 50%;
     position: relative;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+    box-shadow: none;
   }
-  
-  .mouse::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 4px;
-    background-color: #333;
-    border-radius: 50%;
-    animation: scroll 1s infinite;
+
+  .home-hero__social-icon-link {
+    width: 40px;
+    height: 40px;
   }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(20px);
-    }
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .home-hero {
-      height: auto;
-      padding: 20px;
-      text-align: center;
-    }
-  
-    .home-hero__content {
-      padding-bottom: 2rem; /* Ensure space for resume button on mobile */
-    }
-  
-    .home-hero__socials {
-      position: relative;
-      top: auto;
-      left: auto;
-      transform: none;
-      flex-direction: row;
-      justify-content: center;
-      padding: 10px;
-      background-color: transparent;
-      box-shadow: none;
-      z-index: 80000;
-    }
-  
-    .home-hero__social-icon-link {
-      width: 40px;
-      height: 40px;
-      margin: 0 4px;
-    }
-  
-    .home-hero__social-icon {
-      width: 24px;
-      height: 24px;
-    }
-  
-    .download-resume {
-      position: relative;
-      margin: 0rem auto; /* Ensure spacing on mobile */
-      display: inline-block;
-      margin-bottom: 5rem;
-    }
-  
-    .home-hero__mouse-scroll-cont {
-      display: hidden;
-    
-      }
-      
-  }
-  
-
-
-
-
-
-
-
-
-
-
- 
-  
- 
-  
+}
