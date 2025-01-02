@@ -8,18 +8,18 @@
     pointer-events: none; 
     overflow: hidden; 
     z-index: -1500; 
+    -webkit-transform: translateZ(0); /* Prevents rendering glitches in Safari */
   }
   
-  
-  canvas {
+canvas {
+    display: block; /* Avoid inline canvas quirks */
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden; /* Fix for rendering issues */
+    -webkit-transform: translateZ(0); /* Force GPU acceleration in Safari */
   }
   
-  
-  
-  img {
+img {
     max-width: 100%;
     height: auto;
-  }
-  
+}
