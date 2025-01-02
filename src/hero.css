@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.blob-container {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
 
 
 
